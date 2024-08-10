@@ -1,4 +1,4 @@
-package HashMap;
+package dsfsdf;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -8,6 +8,12 @@ public class vuthanhtruong {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int M[]=new int[] {-2,1000,10,1000,999,999,1,-3,4,-1,2,1,0,4,5,6,10,1,2,100};
+		int k=M[0];
+		for(int i=0;i<M.length;i++) {
+			if(k<M[i]) {
+				k=M[i];
+			}
+		}
 		ArrayList<Integer> array=new ArrayList<Integer>();
 		Random rd=new Random();
 		for(int i=0;i<M.length;i++) {
@@ -46,7 +52,13 @@ public class vuthanhtruong {
 			count++;
 		}
 		System.out.println();
-		System.out.println("Vậy giá dãy tăng dần có tổng giá trị lớn nhất là "+max);
+		if(k>max) {
+			System.out.println("Vậy giá dãy tăng dần có tổng giá trị lớn nhất là "+k);
+		}
+		else {
+			System.out.println("Vậy giá dãy tăng dần có tổng giá trị lớn nhất là "+max);
+		}
+		
 	}
 
 }
